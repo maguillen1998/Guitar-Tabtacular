@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// AnotherFile.js
+import React from 'react';
+import MyComponent from './components/testComponent.js'; // Relative path to MyComponent.js
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class AnotherFile extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>This is another file</h1>
+        <MyComponent /> {/* Render the imported component */}
+      </div>
+    );
+  }
 }
 
-export default App;
+export default AnotherFile;
